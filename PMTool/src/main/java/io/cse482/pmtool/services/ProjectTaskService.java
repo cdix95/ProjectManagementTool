@@ -5,6 +5,7 @@ import io.cse482.pmtool.domain.ProjectTask;
 import io.cse482.pmtool.repositories.BacklogRepository;
 import io.cse482.pmtool.repositories.ProjectTaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.sound.midi.Sequence;
@@ -55,4 +56,10 @@ public class ProjectTaskService {
 
 
     }
+
+    public Iterable<ProjectTask>findBacklogById(String id){
+        return projectTaskRepository.findByProjectIdentifierOrderByPriority(id);
+    }
+
+
 }
