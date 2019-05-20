@@ -18,6 +18,7 @@ public class ProjectTask {
     private String projectSequence;
     @NotBlank(message = "Please include a project summary")
     private String summary;
+    private String acceptanceCriteria;
     private String status;
     private Integer priority;
     private Date dueDate;
@@ -60,6 +61,14 @@ public class ProjectTask {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public String getAcceptanceCriteria() {
+        return acceptanceCriteria;
+    }
+
+    public void setAcceptanceCriteria(String acceptanceCriteria) {
+        this.acceptanceCriteria = acceptanceCriteria;
     }
 
     public String getStatus() {

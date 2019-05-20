@@ -60,7 +60,7 @@ public class ProjectTaskService {
             }
 
             //Initial priority when priority is null
-            if(projectTask.getPriority()==null){
+            if(projectTask.getPriority()==0||projectTask.getPriority()==null){
                 projectTask.setPriority(3);
             }
 
