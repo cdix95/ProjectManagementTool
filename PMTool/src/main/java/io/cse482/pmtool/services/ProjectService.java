@@ -2,9 +2,11 @@ package io.cse482.pmtool.services;
 
 import io.cse482.pmtool.domain.Backlog;
 import io.cse482.pmtool.domain.Project;
+import io.cse482.pmtool.domain.User;
 import io.cse482.pmtool.exceptions.ProjectIdException;
 import io.cse482.pmtool.repositories.BacklogRepository;
 import io.cse482.pmtool.repositories.ProjectRepository;
+import io.cse482.pmtool.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +19,16 @@ public class ProjectService {
     @Autowired
     private BacklogRepository backlogRepository;
 
-    public Project saveOrUpdateProject(Project project){
+    @Autowired
+    private UserRepository userRepository;
+
+    public Project saveOrUpdateProject(Project project, String username){
 
         try {
+
+            User user = userRepository.findByUsername(username);
+            project.setUser(user);
+            project.setProjectLeader(user.getUsername());
             project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
 
             if(project.getId()==null){
