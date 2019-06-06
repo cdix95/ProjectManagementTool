@@ -42,13 +42,13 @@ class ProjectTask extends Component {
             to={`/updateProjectTask/${project_task.projectIdentifier}/${
               project_task.projectSequence
             }`}
-            className="btn btn-primary"
+            className="btn btn-primary font-weight-bold"
           >
             View / Update
           </Link>
 
           <button
-            className="btn btn-danger ml-4"
+            className="btn btn-danger ml-4 font-weight-bold"
             onClick={this.onDeleteClick.bind(
               this,
               project_task.projectIdentifier,

@@ -16,12 +16,15 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/register">
+            <Link
+              className="nav-link text-white font-weight-bold"
+              to="/register"
+            >
               Sign Up
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/login">
+            <Link className="nav-link text-white font-weight-bold" to="/login">
               Login
             </Link>
           </li>
@@ -33,20 +36,30 @@ class Header extends Component {
       <div className="collapse navbar-collapse" id="mobile-nav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/dashboard">
+            <Link
+              className="nav-link fas fa-clipboard-list text-white font-weight-bold"
+              to="/dashboard"
+            >
               Dashboard
             </Link>
           </li>
         </ul>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/dashboard">
+            <Link
+              className="nav-link text-white font-weight-bold"
+              to="/dashboard"
+            >
               <i className="fas fa-user-circle mr-1" />
               {user.fullName}
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/" onClick={this.logout.bind(this)}>
+            <Link
+              className="nav-link text-white font-weight-bold"
+              to="/"
+              onClick={this.logout.bind(this)}
+            >
               Logout
             </Link>
           </li>
@@ -63,9 +76,9 @@ class Header extends Component {
     }
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
+      <nav className="navbar navbar-expand-sm bg-purple mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand text-white font-weight-bold" to="/">
             Project Management Tool
           </Link>
           <button

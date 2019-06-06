@@ -1,20 +1,15 @@
 package io.cse482.pmtool.services;
 
 import io.cse482.pmtool.domain.Backlog;
-import io.cse482.pmtool.domain.Project;
 import io.cse482.pmtool.domain.ProjectTask;
 import io.cse482.pmtool.exceptions.ProjectNotFoundException;
 import io.cse482.pmtool.repositories.BacklogRepository;
 import io.cse482.pmtool.repositories.ProjectRepository;
 import io.cse482.pmtool.repositories.ProjectTaskRepository;
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
-import net.bytebuddy.implementation.bytecode.Throw;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import javax.sound.midi.Sequence;
-import java.util.List;
+
 
 @Service
 public class ProjectTaskService {
